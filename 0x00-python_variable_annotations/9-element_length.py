@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
-""" 
-    An iterable object 
-
 """
-from typing import Iterable, Sequence, List, Tuple
+    Duck type and iteration
+"""
+from typing import Iterable, Sequence, List, Union, Tuple
 
 
 def element_length(lst: Iterable[Sequence])\
         -> List[Tuple[Sequence, int]]:
-    """ Type-annotated function element_length that takes a iterable
-        argument.
-        Args:
-            lst: iterable object.
-        Return:
-            element length.
     """
-    return [(i, len(i)) for i in lst]
+        Args:
+            lst: Sequence of list
+        Return:
+            List of tuple of sequence of integers
+    """
 
+    return [(i, len(i)) for i in lst]
