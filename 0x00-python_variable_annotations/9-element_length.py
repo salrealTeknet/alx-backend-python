@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-""" An iterable object """
+""" 
+    An iterable object 
+
+"""
 from typing import Iterable, Sequence, List, Tuple
 
 
