@@ -10,14 +10,11 @@ task_wait_random = __import__('3-tasks').wait_random
 
 async def task_wait_n(n: int = 0, max_delay: int = 10) -> List[float]:
     """
-        Args:
-            max_delay: max wait
-            n: spawn function
-        Return:
-            multiples tasks
+        Take the code from wait_n and alter it into a new function task_wait_n
     """
     delays: List[float] = []
     tasks: List[asyncio.Task] = []
+
 
     for _ in range(n):
         tasks.append(task_wait_random(max_delay))
