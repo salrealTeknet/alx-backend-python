@@ -20,4 +20,3 @@ async def measure_runtime() -> float:
     )
     elapsed = time.perf_counter() - s
     return elapsed
-
