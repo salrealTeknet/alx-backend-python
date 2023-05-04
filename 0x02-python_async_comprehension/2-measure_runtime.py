@@ -11,10 +11,10 @@ async def measure_runtime() -> float:
     times in parallel using asyncio.gather
 
     """
-    tasks = []
-    start_time = time.time()
-    for i in range(4):
-        tasks.append(asyncio.create_task(async_comprehension()))
+     first_time = time.perf_counter()
+    tasks = [async_comprehension() for _ in range(4)]
     await asyncio.gather(*tasks)
-    end_time = time.time()
-    return end_time - start_time
+    elapsed = time.perf_counter()
+
+    return (elapsed - first_time)
+
